@@ -2,8 +2,15 @@
 
 </script>
 <template>
-    <div class="w-3/5 ml-16 h-[330px] bg-night rounded-md text-[#2db2ff] px-5 py-2 shadow-about border-[2px] border-neon">
-    <h1 class="text-4xl font-bebas tracking-wider mb-4">Code · Create · Conquer</h1>
+    
+    
+    <div class="w-3/5 ml-16 h-[390px] relative bg-night rounded-md text-[#2db2ff] px-5 py-2 shadow-about border-[2px] border-neon">
+    <h1 class="absolute -top-12 text-4xl font-bebas tracking-wider"><span class="text-white">About:</span> Jakeb Knowles</h1>
+   
+    <h1 class="type-wrap text-4xl font-bebas tracking-wider mb-4">
+        <span>{{ typedText }}</span>
+        <span class="cursor">|</span>
+    </h1>
     <p class="text-lg font-mono mb-5">As a natural-born coder, my fascination with technology was ignited the moment I saw 
         'Hello World' echo in the terminal, setting me on an unyielding path in software development. 
         With a Bachelor of Information Technology from Griffith University and hands-on experience in 
@@ -16,3 +23,43 @@
 
   
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      typedText: '',
+      fullText: 'Code · Create · Conquer',
+      typingSpeed: 100, // milliseconds
+    };
+  },
+  mounted() {
+    this.createObserver(); 
+  },
+  methods: {
+    createObserver() {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.typeText();
+          observer.unobserve(entry.target); // Stop observing once it's in view
+        }
+      });
+    });
+
+    observer.observe(this.$el);
+    },
+    typeText() {
+      let i = 0;
+      const timer = setInterval(() => {
+        if (i < this.fullText.length) {
+          this.typedText += this.fullText.charAt(i);
+          i++;
+        } else {
+          clearInterval(timer);
+        }
+      }, this.typingSpeed);
+    },
+  },
+};
+</script>

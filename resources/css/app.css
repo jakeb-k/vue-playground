@@ -47,3 +47,17 @@
   .animate-fly-in-from-right {
     animation: flyInFromRight 1.7s ease-in-out forwards;
   }
+  .cursor {
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .type-wrap {
+    display: inline-block;
+    white-space: nowrap;
+  }
