@@ -26,7 +26,7 @@ defineProps({
   
         <MasterLayout>
             <div>
-                <h1>My Name is Jakeb and this is my Vue portfolio</h1>
+                <h1 class="font-bebas">My Name is Jakeb and this is my Vue portfolio</h1>
             </div>
         </MasterLayout>
     

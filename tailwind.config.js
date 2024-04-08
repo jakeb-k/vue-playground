@@ -13,7 +13,16 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                bebas: ['Bebas Neue', ...defaultTheme.fontFamily.sans],
+                sans: ['Figtree',...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                'neon': '#00BBF9',
+                'night' : 'rgb(40, 40, 40)', 
+            },
+            boxShadow: {
+                'post-inset': 'inset 250px 0 0 0 #00BBF9',
+                'pre-inset' : 'inset 0 0 0 0 #00BBF9',
             },
         },
     },
