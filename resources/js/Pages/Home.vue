@@ -1,6 +1,7 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import MasterLayout from '@/Layouts/MasterLayout.vue'; 
+
 defineProps({
     canLogin: {
         type: Boolean,
