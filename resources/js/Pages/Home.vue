@@ -1,6 +1,7 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import MasterLayout from '@/Layouts/MasterLayout.vue'; 
+import Splash from '@/Components/Splash.vue';
 
 defineProps({
     canLogin: {
@@ -25,9 +26,7 @@ defineProps({
     <Head title="Welcome" />
   
         <MasterLayout>
-            <div>
-                <h1 class="font-bebas">My Name is Jakeb and this is my Vue portfolio</h1>
-            </div>
+           <Splash></Splash>
         </MasterLayout>
     
     <footer class="py-16 text-center text-sm text-black dark:text-white/70">

@@ -1,8 +1,8 @@
 <script setup>
 
 import { Link } from '@inertiajs/vue3'; 
+import NavLink from '@/Components/NavLink.vue';
 import Logo from '@/Components/Logo.vue'; 
-
 
 </script>
 <template>
@@ -11,11 +11,8 @@ import Logo from '@/Components/Logo.vue';
     <div class="flex justify-center w-full">
         
         <div class="w-1/3 flex justify-around items-center">
-            <Link class="font-bebas text-3xl text-neon tracking-widest shadow-pre-inset 
-            hover:shadow-post-inset hover:text-white transition duration-300 ease-in-out" href="/#about"> About </Link>  
-
-            <Link class="font-bebas text-3xl text-neon tracking-widest shadow-pre-inset
-            hover:shadow-post-inset hover:text-white transition duration-300 ease-in-out" href="/#about">Projects </Link> 
+            <NavLink href="/about"> About </NavLink>  
+            <NavLink href="/#about">Projects </NavLink> 
         </div>
 
         <div class="w-1/3 flex justify-around">
@@ -23,10 +20,8 @@ import Logo from '@/Components/Logo.vue';
         </div>
 
         <div class="w-1/3 flex justify-around items-center">
-            <Link class="font-bebas text-3xl text-neon tracking-widest shadow-pre-inset
-            hover:shadow-post-inset hover:text-white transition duration-300 ease-in-out" href="/#about"> Contact </Link>    
-            <Link class="font-bebas text-3xl text-neon tracking-widest shadow-pre-inset 
-            hover:shadow-post-inset hover:text-white transition duration-300 ease-in-out" href="/#about"> Repositories </Link>    
+            <NavLink href="/#about"> Contact </NavLink>    
+            <NavLink href="/#about"> Repositories </NavLink>    
         </div>   
     </div>
     </nav>
