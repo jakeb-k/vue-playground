@@ -28,6 +28,7 @@ watchEffect(() => {
     'border-black': true,
     'shadow-lg': true,
     'fixed':true,
+    'z-20':true,
     'w-full':true,
     'transition': true,
     'duration-500': true,
