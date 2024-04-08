@@ -4,3 +4,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes flyInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    20%, 60% {
+        transform: translateX(0%);
+    }
+    45% {
+        transform: translateX(-30%);
+    }
+    80% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+  
+@keyframes flyInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    20%, 60% {
+      transform: translateX(0%);
+    }
+    45% {
+      transform: translateX(30%);
+    }
+    80% {
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+  .animate-fly-in-from-left {
+    animation: flyInFromLeft 1.7s ease-in-out forwards;
+  }
+  
+  .animate-fly-in-from-right {
+    animation: flyInFromRight 1.7s ease-in-out forwards;
+  }
