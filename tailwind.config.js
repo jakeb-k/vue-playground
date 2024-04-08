@@ -25,7 +25,8 @@ export default {
                 'post-inset': 'inset 250px 0 0 0 #00BBF9',
                 'pre-inset' : 'inset 0 0 0 0 #00BBF9',
                 'cta-pre' : '12px 12px 0 #0061c2',
-                'cta-post' : '-12px -12px 0 #E5E7EB'
+                'cta-post' : '-12px -12px 0 #E5E7EB',
+                'nav' : '0 0 30px #00BBF9'
             },
             backgroundImage: {
                 'custom-gradient': 'linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%)',
