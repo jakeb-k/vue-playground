@@ -13,6 +13,9 @@ const email = reactive({
 
 function submit() {
   router.post('/vueknowles/public/contact', email)
+  email.name = ""
+  email.email = ""
+  email.note = ""
 }
 </script>
 <template>
@@ -23,16 +26,16 @@ function submit() {
             <h1 class="text-5xl text-center font-bebas text-neon tracking-wider">Get In Touch</h1>
             
             <label class="text-2xl text-neon font-mono mb-2" for="name">Name:</label>
-            <input class="mb-8 focus:border-ocean" type="text" v-model="email.name" />
+            <input class="mb-8 focus:border-ocean" type="text" id="name" v-model="email.name" />
             <span class="text-red-600" v-if="$page.props.errors.name">{{ $page.props.errors.name }}</span>
 
 
             <label class="text-2xl text-neon font-mono mb-2" for="email">Email:</label>
-            <input class="mb-8 focus:border-ocean" type="text" v-model="email.email" />
+            <input class="mb-8 focus:border-ocean" type="text" id="email" v-model="email.email" />
             <span class="text-red-600" v-if="$page.props.errors.email">{{ $page.props.errors.email }}</span>
 
             <label class="text-2xl text-neon font-mono mb-2" for="note">Message:</label>
-            <textarea class="mb-8 focus:border-ocean h-40" v-model="email.note"></textarea>
+            <textarea class="mb-8 focus:border-ocean h-40" id="note" v-model="email.note"></textarea>
             <span class="text-red-600" v-if="$page.props.errors.note">{{ $page.props.errors.note }}</span>
     
             <!-- <div class="captcha">

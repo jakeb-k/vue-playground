@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Mail;
 use App\Models\Contact; 
+use App\Mail\ContactMail; 
 
 class ProjectController extends Controller
 {
@@ -31,17 +32,14 @@ class ProjectController extends Controller
     public function email(Request $request){
 
 
-        $validatedData = $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:80',
             'email' => 'required|email',
             'note' => 'required|max:150'
         ]);
 
-        Contact::create([
-            'name' => $validatedData['name'],
-            'email'=> $validatedData['email'],
-            'note'=> $validatedData['note']
-        ]); 
+       // The email sending is done using the to method on the Mail facade
+        Mail::to('jk_web_dev@outlook.com')->send(new ContactMail($data));
         
         return redirect()->back(); 
     }
