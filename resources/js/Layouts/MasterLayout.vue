@@ -2,6 +2,7 @@
 
 import { Link } from '@inertiajs/vue3'; 
 import NavLink from '@/Components/NavLink.vue';
+import FooterLink from '@/Components/FooterLink.vue';
 import Logo from '@/Components/Logo.vue'; 
 import { ref, computed, onUnmounted, watchEffect } from 'vue';
 
@@ -27,25 +28,43 @@ const navClasses = computed(() =>
 <template>
     <div :class="navClasses">
         <!-- Primary Navigation Menu -->
-    <div class="flex justify-center w-full">
-        
-        <div class="w-1/3 flex justify-evenly items-center">
-            <NavLink :class="{'text-[32px]': isScrolled}" href="/about"> About </NavLink>  
-            <NavLink :class="{'text-[32px]': isScrolled}" href="/#about">Projects </NavLink> 
-        </div>
+        <div class="flex justify-center w-full">
+            
+            <div class="w-1/3 flex justify-evenly items-center">
+                <NavLink :class="{'text-[32px]': isScrolled}" href="/about"> About </NavLink>  
+                <NavLink :class="{'text-[32px]': isScrolled}" href="/#about">Projects </NavLink> 
+            </div>
 
-        <div class="w-1/3 flex justify-around">
-            <Logo :class="{'size-14': isScrolled}"></Logo>
-        </div>
+            <div class="w-1/3 flex justify-around">
+                <Logo :class="{'size-14': isScrolled}"></Logo>
+            </div>
 
-        <div class="w-1/3 flex justify-evenly items-center">
-            <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Contact </NavLink>    
-            <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Repositories </NavLink>    
-        </div>   
-    </div>
+            <div class="w-1/3 flex justify-evenly items-center">
+                <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Contact </NavLink>    
+                <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Repositories </NavLink>    
+            </div>   
+        </div>
     </div>
     <!-- Page Content -->
     <main>
         <slot />
     </main>
+    <div class="h-14 w-full bg-[#018cbe] flex items-center"> 
+        <div class="flex justify-center items-center w-full">
+            
+            <div class="w-1/3 flex justify-evenly items-center">
+                <FooterLink href="/about"> About </FooterLink>  
+                <FooterLink href="/#about">Projects </FooterLink> 
+            </div>
+
+            <div class="w-1/3 flex justify-around text-night text-xl tracking-wide font-bebas">
+                © 2023 Jakeb Knowles
+            </div>
+
+            <div class="w-1/3 flex justify-evenly items-center">
+                <FooterLink href="/#about"> Contact </FooterLink>    
+                <FooterLink href="/#about"> Repositories </FooterLink>    
+            </div>   
+        </div>
+    </div>
 </template>

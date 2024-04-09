@@ -4,7 +4,7 @@
 <template>
     <div>
         <form class="flex flex-col w-[500px] mt-20 mx-auto border-[3px] border-neon p-8
-        bg-night rounded-lg" method="POST" action='{{url("/contact")}}' id="contact">
+        bg-night rounded-lg shadow-contact" method="POST" action='{{url("/contact")}}' id="contact">
         
         <h1 class="text-5xl text-center font-bebas text-neon tracking-wider">Get In Touch</h1>
         
