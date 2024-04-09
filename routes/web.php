@@ -14,7 +14,9 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+Route::get('/test', function(){
+    return Inertia::render('Test'); 
+});
 Route::resource('/projects', ProjectsController::class); 
 
 Route::middleware('auth')->group(function () {

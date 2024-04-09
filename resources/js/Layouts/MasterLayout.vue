@@ -3,13 +3,14 @@
 import { Link } from '@inertiajs/vue3'; 
 import NavLink from '@/Components/NavLink.vue';
 import Logo from '@/Components/Logo.vue'; 
-import { ref, onMounted, onUnmounted, watchEffect } from 'vue';
+import { ref, computed, onUnmounted, watchEffect } from 'vue';
 
 const isScrolled = ref(false);
 
 watchEffect(() => {
   const handleScroll = () => {
-    isScrolled.value = window.scrollY > 10;
+    const viewportHeight = window.innerHeight;
+    isScrolled.value = window.scrollY > viewportHeight-70;
   };
 
   window.addEventListener('scroll', handleScroll);
@@ -17,23 +18,14 @@ watchEffect(() => {
     window.removeEventListener('scroll', handleScroll);
   });
 });
+const navClasses = computed(() =>
+    isScrolled.value
+        ? 'duration-500 h-14 shadow-nav w-full bg-night fixed z-20'
+        : 'duration-500 h-20 shadow-nav w-full bg-night fixed z-20 '
+);
 </script>
 <template>
-    <nav :class="{
-    'h-14': isScrolled,
-    'h-20': !isScrolled,
-    'shadow-nav': isScrolled,
-    'bg-night': true,
-    'border-b': true,
-    'border-black': true,
-    'shadow-lg': true,
-    'fixed':true,
-    'z-20':true,
-    'w-full':true,
-    'transition': true,
-    'duration-500': true,
-    'ease-in-out': true
-    }" >
+    <div :class="navClasses">
         <!-- Primary Navigation Menu -->
     <div class="flex justify-center w-full">
         
@@ -51,7 +43,7 @@ watchEffect(() => {
             <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Repositories </NavLink>    
         </div>   
     </div>
-    </nav>
+    </div>
     <!-- Page Content -->
     <main>
         <slot />
