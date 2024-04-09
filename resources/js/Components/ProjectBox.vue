@@ -18,7 +18,7 @@ const displayName = computed(() => {
 });
 </script>
 <template>
-    <div class="mr-20 flex flex-col justify-between bg-smoke block mt-12 mx-auto text-center w-[335px] h-[350px] px-4 text-ocean font-bebas tracking-wider 
+    <div class="mr-20 flex flex-col justify-between bg-smoke block mt-12 mx-auto text-center w-[335px] h-[350px] px-4 text-[#007bff] font-bebas tracking-wider 
         text-4xl py-6 rounded-md shadow-pb-pre transform hover:translate-x-[18px] hover:translate-y-[18px] 
         hover:shadow-pb-post hover:text-white hover:bg-ocean hover:underline transition duration-200 linear
         cursor-pointer">

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Mail;
+use App\Models\Contact; 
+
 class ProjectController extends Controller
 {
     /**
@@ -22,7 +25,20 @@ class ProjectController extends Controller
     {
         //
     }
-
+    /**
+     * Send an email 
+     */
+    public function email(){
+        $this->validate($request,[
+            'name'=>'required|max:55',
+            'email'=>'required|email',
+            'note'=>'required',
+        ]);
+        
+        Contact::create($request->all()); 
+        
+        return redirect()->back(); 
+    }
     /**
      * Store a newly created resource in storage.
      */
