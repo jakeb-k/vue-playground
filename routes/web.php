@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectsController;
 use Inertia\Inertia;
+use App\Models\Project; 
 
 Route::get('/', function () {
     return Inertia::render('Home', [
@@ -12,6 +13,8 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+        'webProjects'=> Project::where('type', 'web')->get(),
+        'mobileProjects'=>Project::where('type', 'web')->get()
     ]);
 });
 Route::get('/test', function(){

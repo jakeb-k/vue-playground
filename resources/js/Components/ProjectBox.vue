@@ -1,10 +1,28 @@
 <script setup>
+import { ref, onMounted, computed } from 'vue';
+import { defineProps } from 'vue';
+
+const props = defineProps({
+    project: Object
+})
+const imageSrc = ref('');
+
+onMounted(async () => {
+  if (props.project.logo) {
+    const imagePath = `../assets/images/logos/${props.project.logo}`;
+    imageSrc.value = new URL(imagePath, import.meta.url).href;
+  }
+});
+const displayName = computed(() => {
+  return props.project.name.replace(/_/g, ' ');
+});
 </script>
 <template>
     <div class="bg-smoke block mt-12 mx-auto text-center w-1/4 h-96 text-ocean font-bebas tracking-wider 
-        text-3xl py-6 rounded-xl shadow-pb-pre transform hover:translate-x-[18px] hover:translate-y-[18px] 
+        text-4xl py-6 rounded-xl shadow-pb-pre transform hover:translate-x-[18px] hover:translate-y-[18px] 
         hover:shadow-pb-post hover:text-white hover:bg-ocean hover:underline transition duration-200 linear
         cursor-pointer">
-
+        <img :src="imageSrc">
+        <h1>{{ displayName ?? "" }}</h1>
     </div>
 </template>

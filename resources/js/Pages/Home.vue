@@ -1,5 +1,5 @@
 <script setup>
-
+import { defineProps, onMounted, watch } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import MasterLayout from '@/Layouts/MasterLayout.vue'; 
 
@@ -24,18 +24,25 @@ defineProps({
         type: String,
         required: true,
     },
+    webProjects: {
+        type: Array
+    },
+    mobileProjects: {
+        type: Array
+    },
 });
 
 </script>
 
 <template>
+    
     <Head title="Welcome" />
   
         <MasterLayout>
            <Splash></Splash>
             <About></About>
             <Line></Line>
-            <Projects></Projects>
+            <Projects :webProjects="webProjects" :mobileProjects="mobileProjects"></Projects>
         </MasterLayout>
     
     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
