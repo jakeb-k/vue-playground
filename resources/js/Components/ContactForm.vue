@@ -16,7 +16,7 @@
         <input class="mb-8 focus:border-ocean" type="text" name="email" id="email" />
 
         <label class="text-2xl text-neon font-mono mb-2" for="note">Message:</label>
-        <textarea class="mb-8 focus:border-ocean h-44" name="note" id="note"></textarea>
+        <textarea class="mb-8 focus:border-ocean h-40" name="note" id="note"></textarea>
  
         <!-- <div class="captcha">
             {!! NoCaptcha::display() !!}
