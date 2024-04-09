@@ -9,8 +9,8 @@ const isScrolled = ref(false);
 
 watchEffect(() => {
   const handleScroll = () => {
-    const viewportHeight = window.innerHeight;
-    isScrolled.value = window.scrollY > viewportHeight-70;
+    const viewportHeight = window.innerHeight-120;
+    isScrolled.value = window.scrollY > viewportHeight;
   };
 
   window.addEventListener('scroll', handleScroll);

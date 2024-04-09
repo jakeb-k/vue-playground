@@ -20,12 +20,15 @@ export default {
                 'neon': '#00BBF9',
                 'night' : 'rgb(40, 40, 40)', 
                 'ocean' : '#0061c2',
+                'smoke' : ' #E5E7EB', 
             },
             boxShadow: {
                 'post-inset': 'inset 250px 0 0 0 #00BBF9',
                 'pre-inset' : 'inset 0 0 0 0 #00BBF9',
                 'cta-pre' : '12px 12px 0 #0061c2',
                 'cta-post' : '-12px -12px 0 #E5E7EB',
+                'pb-pre' : '18px 18px 0 #0061c2',
+                'pb-post' : '-18px -18px 0 #E5E7EB',
                 'nav' : '0 0 30px #00BBF9',
                 'about':'0 0 10px #00BBF9'
             },
