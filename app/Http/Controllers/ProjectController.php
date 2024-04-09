@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Contact; 
 use App\Mail\ContactMail; 
+use Inertia\Inertia; 
 
 class ProjectController extends Controller
 {
@@ -54,9 +55,16 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show(string $name)
     {
-        //
+        $project = Project::where('name', $name)->first();
+
+        $projectName = str_replace('_', '', $project->name); 
+
+        return Inertia::render('Project',[
+            'project'=> $project,
+            'projectName'=>$projectName, 
+        ]); 
     }
 
     /**
