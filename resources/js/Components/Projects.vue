@@ -7,7 +7,7 @@ const props = defineProps({
 });
 </script>
 <template>
-    <div class="w-full py-10 bg-night">
+    <div id="projects" class="w-full py-10 bg-night">
         <h1 class="text-neon font-bebas mx-32 text-5xl tracking-wide mt-10">Websites</h1>
         <div class="flex flex-row h-[500px] overflow-x-scroll mx-32 mb-12">
             <div v-for="project in webProjects">

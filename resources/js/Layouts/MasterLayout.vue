@@ -19,6 +19,9 @@ watchEffect(() => {
     window.removeEventListener('scroll', handleScroll);
   });
 });
+
+
+
 const navClasses = computed(() =>
     isScrolled.value
         ? 'duration-500 h-14 shadow-nav w-full bg-night fixed z-20'
@@ -31,8 +34,8 @@ const navClasses = computed(() =>
         <div class="flex justify-center w-full">
             
             <div class="w-1/3 flex justify-evenly items-center">
-                <NavLink :class="{'text-[32px]': isScrolled}" href="/about"> About </NavLink>  
-                <NavLink :class="{'text-[32px]': isScrolled}" href="/#about">Projects </NavLink> 
+                <NavLink :class="{'text-[32px]': isScrolled}" href="#about" v-scroll-to="{ el: '#about', duration: 1000 }"> About </NavLink>  
+                <NavLink :class="{'text-[32px]': isScrolled}" href="#projects" v-scroll-to="{ el: '#projects', duration: 1000 }">Projects </NavLink> 
             </div>
 
             <div class="w-1/3 flex justify-around">
@@ -40,8 +43,8 @@ const navClasses = computed(() =>
             </div>
 
             <div class="w-1/3 flex justify-evenly items-center">
-                <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Contact </NavLink>    
-                <NavLink :class="{'text-[32px]': isScrolled}" href="/#about"> Repositories </NavLink>    
+                <NavLink :class="{'text-[32px]': isScrolled}" href="#contact" v-scroll-to="{ el: '#contact', duration: 1400 }"> Contact </NavLink>    
+                <NavLink :class="{'text-[32px]': isScrolled}" href="https://github.com/jakeb-k"> Repositories </NavLink>    
             </div>   
         </div>
     </div>
@@ -53,8 +56,8 @@ const navClasses = computed(() =>
         <div class="flex justify-center items-center w-full">
             
             <div class="w-1/3 flex justify-evenly items-center">
-                <FooterLink href="/about"> About </FooterLink>  
-                <FooterLink href="/#about">Projects </FooterLink> 
+                <FooterLink href="#about" v-scroll-to="{ el: '#about', duration: 1000 }"> About </FooterLink>  
+                <FooterLink href="#projects" v-scroll-to="{ el: '#projects', duration: 1000 }">Projects </FooterLink> 
             </div>
 
             <div class="w-1/3 flex justify-around text-night text-xl tracking-wide font-bebas">
@@ -62,8 +65,8 @@ const navClasses = computed(() =>
             </div>
 
             <div class="w-1/3 flex justify-evenly items-center">
-                <FooterLink href="/#about"> Contact </FooterLink>    
-                <FooterLink href="/#about"> Repositories </FooterLink>    
+                <FooterLink href="#contact" v-scroll-to="{ el: '#contact', duration: 1000 }"> Contact </FooterLink>    
+                <FooterLink href="https://github.com/jakeb-k"> Repositories </FooterLink>    
             </div>   
         </div>
     </div>
