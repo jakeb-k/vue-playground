@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'; 
 import MasterLayout from '@/Layouts/MasterLayout.vue';
 import Splash from '@/Components/Splash.vue'; 
 import Project from '@/Components/Detail/Project.vue';
@@ -17,7 +16,7 @@ defineProps({
 <template>
     <Head :title="projectName" />
         <MasterLayout>
-             <Project :project="project"></Project>
+             <Project :projectName="projectName" :project="project"></Project>
         </MasterLayout>
 
 </template>

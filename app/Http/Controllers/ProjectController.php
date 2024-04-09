@@ -59,7 +59,7 @@ class ProjectController extends Controller
     {
         $project = Project::where('name', $name)->first();
 
-        $projectName = str_replace('_', '', $project->name); 
+        $projectName = str_replace('_', ' ', $project->name); 
 
         return Inertia::render('Project',[
             'project'=> $project,
