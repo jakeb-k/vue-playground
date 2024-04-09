@@ -28,14 +28,20 @@ class ProjectController extends Controller
     /**
      * Send an email 
      */
-    public function email(){
-        $this->validate($request,[
-            'name'=>'required|max:55',
-            'email'=>'required|email',
-            'note'=>'required',
+    public function email(Request $request){
+
+
+        $validatedData = $request->validate([
+            'name' => 'required|max:80',
+            'email' => 'required|email',
+            'note' => 'required|max:150'
         ]);
-        
-        Contact::create($request->all()); 
+
+        Contact::create([
+            'name' => $validatedData['name'],
+            'email'=> $validatedData['email'],
+            'note'=> $validatedData['note']
+        ]); 
         
         return redirect()->back(); 
     }

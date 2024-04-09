@@ -46,7 +46,7 @@ const navClasses = computed(() =>
         </div>
     </div>
     <!-- Page Content -->
-    <main>
+    <main class="overflow-x-hidden">
         <slot />
     </main>
     <div class="h-14 w-full bg-[#018cbe] flex items-center"> 

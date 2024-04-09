@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ProjectController;
 use Inertia\Inertia;
 use App\Models\Project; 
 
@@ -20,7 +20,8 @@ Route::get('/', function () {
 Route::get('/test', function(){
     return Inertia::render('Test'); 
 });
-Route::resource('/projects', ProjectsController::class); 
+Route::post('/contact', [ProjectController::class,'email']); 
+Route::resource('/projects', ProjectController::class); 
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
