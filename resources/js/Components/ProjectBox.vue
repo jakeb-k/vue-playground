@@ -22,7 +22,7 @@ const displayName = computed(() => {
         text-4xl py-6 rounded-md shadow-pb-pre transform hover:translate-x-[18px] hover:translate-y-[18px] 
         hover:shadow-pb-post hover:text-white hover:bg-ocean hover:underline transition duration-200 linear
         cursor-pointer">
-        <img class="w-[270px] max-h-64 rounded-lg mx-auto" :src="imageSrc">
+        <img class="w-[270px] max-h-64 rounded-3xl m-auto object-contain" :src="imageSrc">
         <h1>{{ displayName ?? "" }}</h1>
     </div>
 </template>

@@ -7,6 +7,7 @@ import Line from '@/Components/Line.vue';
 import Splash from '@/Components/Splash.vue';
 import About from '@/Components/About.vue'; 
 import Projects from '@/Components/Projects.vue'; 
+import Contact from '@/Components/Contact.vue'; 
 
 
 defineProps({
@@ -39,10 +40,12 @@ defineProps({
     <Head title="Welcome" />
   
         <MasterLayout>
-           <Splash></Splash>
+            <Splash></Splash>
             <About></About>
             <Line></Line>
             <Projects :webProjects="webProjects" :mobileProjects="mobileProjects"></Projects>
+            <Line></Line>
+            <Contact></Contact>
         </MasterLayout>
     
     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
