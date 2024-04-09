@@ -14,7 +14,7 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'webProjects'=> Project::where('type', 'web')->get(),
-        'mobileProjects'=>Project::where('type', 'web')->get()
+        'mobileProjects'=>Project::where('type', 'mobile')->get()
     ]);
 });
 Route::get('/test', function(){
