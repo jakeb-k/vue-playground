@@ -19,13 +19,17 @@ defineProps({
     },
     viewMode: {
         type: String, 
+    },
+    itemCount: {
+        type: Number
     }
 });
 </script>
 <template>
     <Head :title="projectName" />
         <MasterLayout>
-             <Project :projectName="projectName" :project="project" :techs="techs" :desc="desc" :viewMode="viewMode"></Project>
+             <Project :projectName="projectName" :project="project" :techs="techs" :desc="desc" 
+                      :viewMode="viewMode" :itemCount="itemCount"></Project>
         </MasterLayout>
 
 </template>

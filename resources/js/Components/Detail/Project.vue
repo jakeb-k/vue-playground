@@ -14,6 +14,7 @@ const props = defineProps({
     },
     desc: Array,
     viewMode: String, 
+    itemCount: Number,
 })
 const typedText = ref('');
 const projectName = ref(props.projectName);
@@ -36,7 +37,9 @@ onMounted(() => {
 });
 
 function viewSwitch(){
-    viewMode.value = viewMode.value === 'web' ? 'mobile' : 'web';
+    if(props.viewMode == 'web' && props.projectName != 'F-Service') {
+        viewMode.value = viewMode.value === 'web' ? 'mobile' : 'web';
+    }
 }
 </script>
 <template>
@@ -46,7 +49,7 @@ function viewSwitch(){
                 <span>{{ typedText }}</span>
                 <span class="cursor">|</span>
             </h1>
-            <div class="w-7/12 flex flex-row justify-between">
+            <div class="w-7/12 flex flex-row">
                 <div v-for="tech in techs">
                     <TechBox :tech="tech"></TechBox>
                 </div>
@@ -55,9 +58,9 @@ function viewSwitch(){
              
                 <ProjectInfo class="mr-10" :desc="desc" :url="props.project.url"></ProjectInfo>
 
-                <DesktopView v-if="viewMode == 'web'" :name="props.project.name"></DesktopView>
+                <DesktopView v-if="viewMode == 'web'" :name="props.project.name" :itemCount="itemCount"></DesktopView>
 
-                <MobileView v-if="viewMode == 'mobile'" :name="props.project.name"></MobileView>
+                <MobileView v-if="viewMode == 'mobile'" :name="props.project.name" :itemCount="itemCount"></MobileView>
             </div>
             <button @click="viewSwitch()" class="size-16 absolute left-2/4 bottom-5">
                 <svg class="hover:fill-ocean duration-150 ease-in-out" version="1.1" id="swap-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 94.35">

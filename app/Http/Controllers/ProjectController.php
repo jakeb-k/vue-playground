@@ -63,7 +63,7 @@ class ProjectController extends Controller
 
         $techs = explode(',', $project->techs); 
 
-         $desc = explode('+', $project->description); 
+        $desc = explode('+', $project->description); 
 
         // Check directories for web and mobile
         $webPath = resource_path('js/assets/images/'.$name.'/web');
@@ -71,6 +71,8 @@ class ProjectController extends Controller
 
         $webExists = is_dir($webPath);
         $mobileExists = is_dir($mobilePath);
+
+
         // Determine the view mode based on the available directories
         if ($webExists && !$mobileExists) {
             $viewMode = 'web';  
@@ -81,13 +83,16 @@ class ProjectController extends Controller
             $viewMode = 'web';
         }
         
-
+        $items = scandir(resource_path('js/assets/images/'.$name.'/'.$viewMode));
+        $itemCount = count($items) - 2;
+        
         return Inertia::render('Project',[
             'project'=> $project,
             'projectName'=>$projectName, 
             'techs'=> $techs,
             'desc' => $desc,
-            'viewMode'=>$viewMode
+            'viewMode'=>$viewMode,
+            'itemCount'=>$itemCount
         ]); 
     }
 
