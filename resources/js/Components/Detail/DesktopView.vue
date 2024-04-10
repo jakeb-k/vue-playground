@@ -1,12 +1,12 @@
 <script setup>
 
 const props = defineProps({
-    imageUrls: Array,
+    name: String,
 })
 
 </script>
 <template>
-    <div class="border-[3px] border-night">
-        
+    <div class="web-view">
+        <img :src="'/vueknowles/resources/js/assets/images/'+name+'/web/0.webp'"
     </div>
 </template>

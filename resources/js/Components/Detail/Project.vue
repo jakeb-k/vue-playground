@@ -37,7 +37,7 @@ onMounted(() => {
 });
 </script>
 <template>
-    <div class="h-dvh w-full bg-smoke">
+    <div class="h-full w-full pb-20 bg-smoke block">
         <div class="pt-28 pl-32 bg-smoke">
             <h1 class="type-wrap text-5xl text-night font-bebas tracking-wider ">
                 <span>{{ typedText }}</span>
@@ -52,7 +52,7 @@ onMounted(() => {
              
                 <ProjectInfo class="mr-10" :desc="desc" :url="props.project.url"></ProjectInfo>
 
-                <MobileView :name="props.project.name"></MobileView>
+                <DesktopView :name="props.project.name"></DesktopView>
             </div>
             
         </div>
