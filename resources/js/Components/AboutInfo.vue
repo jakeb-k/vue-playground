@@ -4,14 +4,15 @@
 <template>
     
     
-    <div class="w-3/5 ml-16 h-[390px] relative bg-night rounded-md text-[#2db2ff] px-5 py-2 shadow-about border-[2px] border-neon">
-    <h1 class="absolute -top-12 text-4xl font-bebas tracking-wider">About: <span class="text-white"> Jakeb Knowles</span></h1>
+    <div class="w-11/12 lg:w-3/5 lg:ml-16 h-[390px] relative bg-night rounded-md text-[#2db2ff] px-5 py-2 
+    shadow-about border-[2px] border-neon">
+    <h1 class="absolute -top-7 lg:-top-12 text-2xl lg:text-4xl font-bebas tracking-wider">About: <span class="text-white"> Jakeb Knowles</span></h1>
    
-    <h1 class="type-wrap text-4xl font-bebas tracking-wider mb-4">
+    <h1 class="type-wrap text-xl lg:text-4xl font-bebas tracking-wider mb-4">
         <span>{{ typedText }}</span>
         <span class="cursor">|</span>
     </h1>
-    <p class="text-lg font-mono mb-5">As a natural-born coder, my fascination with technology was ignited the moment I saw 
+    <p class=" text-[12px] lg:text-lg font-mono mb-5">As a natural-born coder, my fascination with technology was ignited the moment I saw 
         'Hello World' echo in the terminal, setting me on an unyielding path in software development. 
         With a Bachelor of Information Technology from Griffith University and hands-on experience in 
         developing cutting-edge projects like Aussie PicklePro and Nomster, I've honed a diverse skill 
