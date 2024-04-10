@@ -11,12 +11,15 @@ defineProps({
     projectName: {
         type: String
     },
+    techs: {
+        type: Array
+    }
 });
 </script>
 <template>
     <Head :title="projectName" />
         <MasterLayout>
-             <Project :projectName="projectName" :project="project"></Project>
+             <Project :projectName="projectName" :project="project" :techs="techs"></Project>
         </MasterLayout>
 
 </template>

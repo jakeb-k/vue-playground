@@ -61,9 +61,14 @@ class ProjectController extends Controller
 
         $projectName = str_replace('_', ' ', $project->name); 
 
+        $techs = explode(',', $project->techs); 
+
+      
+
         return Inertia::render('Project',[
             'project'=> $project,
             'projectName'=>$projectName, 
+            'techs'=> $techs,
         ]); 
     }
 

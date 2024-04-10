@@ -1,10 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'; 
+import { ref, onMounted, defineProps } from 'vue'; 
 import TechBox from '@/Components/Detail/TechBox.vue'; 
 
 const props = defineProps({
     project: Object,
     projectName: String,
+    techs: {
+        type: Array,
+        default: () => ([]), // provide a default empty array
+    },
 })
 const typedText = ref('');
 const projectName = ref(props.projectName);
@@ -24,6 +28,7 @@ function typeText() {
 
 onMounted(() => {
   typeText();
+  console.log(props); 
 });
 </script>
 <template>
@@ -33,8 +38,10 @@ onMounted(() => {
                 <span>{{ typedText }}</span>
                 <span class="cursor">|</span>
             </h1>
-            <div class="w-full flex flex-row justify-between">
-                <TechBox></TechBox>
+            <div class="w-7/12 flex flex-row justify-between">
+                <div v-for="tech in techs">
+                    <TechBox :tech="tech"></TechBox>
+                </div>
             </div>
             
         </div>
