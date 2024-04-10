@@ -12,18 +12,18 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div class="mt-12 bg-night w-1/2 py-[10px] px-[20px] rounded-lg border-[2.5px] border-ocean">
+    <div class="mt-12 mb-12 bg-night w-5/12 h-4/12 py-[10px] px-[14px] rounded-lg border-[2.5px] border-ocean absolute">
         <p class="font-mono text-smoke">{{ desc[0] }}</p>
         <ul class="list-disc">
-            <li class="font-mono text-sm text-smoke my-6 mx-12">{{ desc[1] }}</li>
-            <li class="font-mono text-sm text-smoke my-6 mx-12">{{ desc[2] }}</li>
-            <li class="font-mono text-sm text-smoke my-6 mx-12">{{ desc[3] }}</li>
+            <li class="font-mono text-sm text-smoke my-4 mx-12">{{ desc[1] }}</li>
+            <li class="font-mono text-sm text-smoke my-4 mx-12">{{ desc[2] }}</li>
+            <li class="font-mono text-sm text-smoke mt-6 mx-12">{{ desc[3] }}</li>
         </ul>
         <a :href="url">
             <button class="bg-smoke block my-4 mx-auto text-center w-5/12 text-ocean font-bebas tracking-wider 
-            text-3xl py-6 rounded-xl shadow-cta-pre transform hover:translate-x-[12px] hover:translate-y-[12px] 
+            text-2xl py-5 rounded-xl shadow-cta-pre transform hover:translate-x-[12px] hover:translate-y-[12px] 
             hover:shadow-cta-post hover:text-white hover:bg-ocean hover:underline transition duration-200 linear">
-            Contact Now!</button>
+            View Project!</button>
         </a>
     </div>
 </template>
