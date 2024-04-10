@@ -61,7 +61,7 @@ const navClasses = computed(() =>
             </div>
 
             <div class="w-1/3 flex justify-around text-night text-xl tracking-wide font-bebas">
-                © 2023 Jakeb Knowles
+                © 2024 Jakeb Knowles
             </div>
 
             <div class="w-1/3 flex justify-evenly items-center">

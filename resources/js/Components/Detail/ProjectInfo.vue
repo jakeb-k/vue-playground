@@ -12,7 +12,7 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div class="mt-12 mb-12 bg-night w-5/12 h-4/12 py-[10px] px-[14px] rounded-lg border-[2.5px] border-ocean absolute">
+    <div class="mt-12 bg-night w-5/12 h-[450px] py-[10px] px-[14px] rounded-lg border-[2.5px] border-ocean ">
         <p class="font-mono text-smoke">{{ desc[0] }}</p>
         <ul class="list-disc">
             <li class="font-mono text-sm text-smoke my-4 mx-12">{{ desc[1] }}</li>

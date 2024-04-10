@@ -16,6 +16,9 @@ defineProps({
     },
     desc: {
         type: Array
+    },
+    viewMode: {
+        type: String, 
     }
 });
 </script>

@@ -66,12 +66,11 @@ class ProjectController extends Controller
          $desc = explode('+', $project->description); 
 
         // Check directories for web and mobile
-        $webPath = public_path('images/'.$name.'/web');
-        $mobilePath = public_path('images/'.$name.'/mobile');
+        $webPath = resource_path('js/assets/images/'.$name.'/web');
+        $mobilePath = resource_path('js/assets/images/'.$name.'/mobile');
 
         $webExists = is_dir($webPath);
         $mobileExists = is_dir($mobilePath);
-
         // Determine the view mode based on the available directories
         if ($webExists && !$mobileExists) {
             $viewMode = 'web';  

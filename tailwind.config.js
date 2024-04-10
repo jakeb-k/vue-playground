@@ -34,7 +34,8 @@ export default {
                 'nav' : '0 0 30px #00BBF9',
                 'about':'0 0 10px #00BBF9',
                 'contact': '30px 30px 0 #018cbe',
-                'tech': '0 0 10px #0061c2;'
+                'tech': '0 0 10px #0061c2;',
+                'project-img': '0 8px 12px rgb(89, 89, 89);' 
             },
             backgroundImage: {
                 'custom-gradient': 'linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%)',
