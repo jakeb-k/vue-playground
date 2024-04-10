@@ -7,9 +7,6 @@ const props = defineProps({
     url: String,
 })
 
-onMounted(() => {
-    console.log(props); 
-})
 </script>
 <template>
     <div class="mt-12 bg-night w-5/12 h-[450px] py-[10px] px-[14px] rounded-lg border-[2.5px] border-ocean ">

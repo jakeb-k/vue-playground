@@ -25,7 +25,7 @@ defineProps({
 <template>
     <Head :title="projectName" />
         <MasterLayout>
-             <Project :projectName="projectName" :project="project" :techs="techs" :desc="desc"></Project>
+             <Project :projectName="projectName" :project="project" :techs="techs" :desc="desc" :viewMode="viewMode"></Project>
         </MasterLayout>
 
 </template>
