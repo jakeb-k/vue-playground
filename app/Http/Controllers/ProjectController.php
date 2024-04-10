@@ -63,12 +63,14 @@ class ProjectController extends Controller
 
         $techs = explode(',', $project->techs); 
 
+        $desc = explode('+', $project->description); 
       
 
         return Inertia::render('Project',[
             'project'=> $project,
             'projectName'=>$projectName, 
             'techs'=> $techs,
+            'desc' => $desc
         ]); 
     }
 

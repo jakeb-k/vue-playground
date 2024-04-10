@@ -13,13 +13,16 @@ defineProps({
     },
     techs: {
         type: Array
+    },
+    desc: {
+        type: Array
     }
 });
 </script>
 <template>
     <Head :title="projectName" />
         <MasterLayout>
-             <Project :projectName="projectName" :project="project" :techs="techs"></Project>
+             <Project :projectName="projectName" :project="project" :techs="techs" :desc="desc"></Project>
         </MasterLayout>
 
 </template>

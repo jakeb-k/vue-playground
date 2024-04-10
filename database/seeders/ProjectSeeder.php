@@ -36,7 +36,7 @@ class ProjectSeeder extends Seeder
             'description'=>"Freemans Lawns features a dynamic, SEO-optimized website and a feature-rich blog with a robust CMS, all designed to enhance user engagement and site manageability.+Combines html5, SCSS, and jquery for a compelling UI, alongside laravel for backend efficiency, offering an engaging, responsive experience across devices.+Implements MVC architecture with sqlite for efficient data management, user authentication with Vite, and engaging jquery animations to boost interactivity.+Features a WordPress version with ACF for tailored content management, ensuring the site's functionality and design are consistent with the original bespoke solution.",
             'type'=>'web',
             'url'=>'https://vimeo.com/899431114?share=copy',
-            'techs'=>'php,laravel,jquery,html5,sass,sqlite,github,linux,googleanalytics,WordPress',
+            'techs'=>'php,laravel,jquery,html5,sass,sqlite,github,linux,googleanalytics,wordpress',
             'status'=>'Completed January 24',
             'logo'=>'freemanLogo.webp']);
 
@@ -54,7 +54,7 @@ class ProjectSeeder extends Seeder
             'description'=>'HaHa Hub is an humor-centered mobile application, developed solo using angular, ionic Capacitor, and typescript, delivering a unique blend of comedy and technology.+Utilizes angular and ionic Capacitor for cross-platform mobile app development, with a typescript backend ensuring robust data handling and application logic.+Features API integration for a vast joke collection, a user-friendly UI/UX design with html5 and SCSS, and includes Google AdMob for monetization.+Employs Git for version control, typescript for backend structure, and a successful Google Ads campaign, demonstrating effective marketing and user engagement strategies.',
             'type'=>'mobile',
             'url'=>'https://play.google.com/store/apps/details?id=com.ionic.hahahub&pli=1',
-            'techs'=>'html5,sass,ionic,typescript,angular,github,androidstudio,GoogleAds',
+            'techs'=>'html5,sass,ionic,typescript,angular,github,androidstudio,googleads',
             'status'=>'Completed September 23 - Available on the Google Play Store',
             'logo'=>'hahaLogo.webp']);
 
@@ -63,7 +63,7 @@ class ProjectSeeder extends Seeder
             'description'=>"Japres is an engaging mobile app designed for learning Japanese, leveraging angular, ionic, and typescript to provide an engaging educational experience.+Developed by a team using angular and ionic for a seamless mobile experience and typescript for advanced interaction, ensuring an interactive and effective learning environment.+Creates exciting UI with SCSS and HTML, Agile methodology for flexible development, and Android Studio for APK generation, delivering a high-quality, user-centric educational app.+Offers language games and study tools, powered by a collaborative team effort, emphasizing user-centric design for learners at various proficiency levels.",
             'type'=>'mobile',
             'url'=>'https://vimeo.com/899423632?share=copy',
-            'techs'=>'html5,sass,ionic,typescript,angular,github,androidstudio,Trello',
+            'techs'=>'html5,sass,ionic,typescript,angular,github,androidstudio,trello',
             'status'=>'Completed October 23',
             'logo'=>'japresLogo.webp'
         ]);

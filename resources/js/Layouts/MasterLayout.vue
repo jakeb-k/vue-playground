@@ -25,7 +25,7 @@ watchEffect(() => {
 const navClasses = computed(() =>
     isScrolled.value
         ? 'duration-500 h-14 shadow-nav w-full bg-night fixed z-20'
-        : 'duration-500 h-20 shadow-nav w-full bg-night fixed z-20 '
+        : 'duration-500 h-20 w-full bg-night fixed z-20 '
 );
 </script>
 <template>
