@@ -127,3 +127,17 @@
   transform: translateX(-50%);
   border-radius: 5px;
 }
+@media only screen and (max-width: 470px) {
+  .web-view img {
+    width:85%;  
+    top:50%; 
+  }
+  .web-view::after, .web-view::before {
+    left:50%; 
+    bottom:160px;
+  }
+  .web-view::before {
+    left:50%; 
+    bottom:170px;
+  }
+}

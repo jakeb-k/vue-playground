@@ -36,7 +36,7 @@ startSlideshow();
     <div class="web-view">
         <img :src="'/vueknowles/resources/js/assets/images/'+name+'/web/'+index+'.webp'" >
 
-        <div class="left-[63.5%] top-[90%]  absolute flex flex-row">
+        <div class="left-[25%] top-[82.5%] lg:left-[63.5%] lg:top-[90%] absolute flex flex-row">
             <button 
                 class="p-2 rounded-full mr-2" 
                 v-for="n in props.itemCount" 
