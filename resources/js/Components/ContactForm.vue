@@ -20,7 +20,7 @@ function submit() {
 </script>
 <template>
     <div>
-        <form @submit.prevent="submit" class="flex flex-col w-[500px] mt-20 mx-auto border-[3px] border-neon p-8
+        <form @submit.prevent="submit" class="flex flex-col w-[360px] lg:w-[500px] mt-20 mx-auto border-[3px] border-neon p-8
         bg-night rounded-lg shadow-contact">
        
             <h1 class="text-5xl text-center font-bebas text-neon tracking-wider">Get In Touch</h1>

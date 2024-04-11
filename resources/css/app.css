@@ -63,8 +63,8 @@
   }
 *::-webkit-scrollbar {
   background:rgb(40,40,40); 
-    width: 20px;
-    position:absolute; 
+  width: 20px;
+    
 }
 
 /* Track */
