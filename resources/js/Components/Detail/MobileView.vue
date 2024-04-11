@@ -27,8 +27,9 @@ function setIndex(n) {
 startSlideshow();
 </script>
 <template>
-   <div class="flex flex-col">
-        <img class="mx-56 border-[3px] border-night object-cover rounded-xl h-[450px] w-auto shadow-project-img" 
+   <div class="flex flex-col mt-10 -mb-80">
+        <img class="lg:mx-56 border-[3px] border-night object-cover rounded-xl w-11/12 lg:h-[450px] lg:w-auto 
+        shadow-project-img" 
         :src="'/vueknowles/resources/js/assets/images/'+name+'/mobile/'+index+'.webp'"/> 
         <div class="mx-auto mt-5 flex flex-row">
             <button 
