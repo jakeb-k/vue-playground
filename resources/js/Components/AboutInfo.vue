@@ -8,7 +8,7 @@
     shadow-about border-[2px] border-neon">
     <h1 class="absolute -top-7 lg:-top-12 text-2xl lg:text-4xl font-bebas tracking-wider">About: <span class="text-white"> Jakeb Knowles</span></h1>
    
-    <h1 class="type-wrap text-xl lg:text-4xl font-bebas tracking-wider mb-4">
+    <h1 class="type-wrap text-2xl lg:text-4xl font-bebas tracking-wider mb-4">
         <span>{{ typedText }}</span>
         <span class="cursor">|</span>
     </h1>
